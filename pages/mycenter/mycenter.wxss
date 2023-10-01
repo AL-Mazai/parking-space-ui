@@ -1,0 +1,108 @@
+/* pages/personnel/personnel.wxss */
+.container{
+    background-color: #F4F4F4;
+}
+
+/**********************用户信息**********************/
+.page-top {    
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    background-color: #5194E6;
+}
+
+.page-top .user-avatar {
+    width: 80px;
+    height: 80px;
+    /*将头像设置为圆形 */
+    border-radius: 50%;
+}
+
+.user-info-and-settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    /* 让用户信息和设置占据剩余的可用空间 */
+    margin-left: 15px;
+    margin-right: 15px;
+    /* 为用户信息和设置添加一些间距 */
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 用户信息左对齐 */
+
+    font-size: 16px;
+    color: white;
+}
+
+.account-settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings-label {
+    font-size: 14px;
+    color: white;
+}
+.query-box {
+    margin-top: -40rpx;
+    border-radius: 10rpx 10rpx 0 0 ;
+}
+.extension {
+    margin-bottom: 0;
+}
+.extension-item text {
+    color: black;
+}
+
+/****************其他********************/
+.other-server {
+    width: 100%;
+    height: 100%;
+  
+    display: inline-block;
+    padding-bottom: 110px;
+}
+.personnel-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+.personnel-item image {
+    margin:25rpx;
+    height:50rpx;
+    width:55rpx;
+}
+.personnel-descript {
+    height:100rpx;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:2rpx solid #F4F4F4;
+}
+.personnel-descript text {
+    font-weight: 600;
+}
+.personnel-descript text.action {
+    font-size: 33rpx;
+    color: #5194E6;
+    margin: 30rpx;
+}
+.personnel-descript text.action::after {
+    content: " >";
+    color: #CACACA;
+    padding-left: 20rpx;
+}
+
+
+

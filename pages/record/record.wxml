@@ -1,0 +1,21 @@
+<!-- ticket-record.wxml -->
+<view class="record-list">
+  <block wx:for="{{ticketRecords}}" wx:key="index">
+    <view class="record-item">
+      <view class="left-column">
+        <view>
+          <text class="start">{{item.start}}</text>
+          <text>——></text>
+          <text class="end">{{item.end}}</text>
+        </view>
+        <view class="time">
+          <text>{{item.time}}</text>
+        </view>
+      </view>
+      
+      <view class="right-column">
+        <text class="cost">{{item.cost}}</text>
+      </view>
+    </view>
+  </block>
+</view>

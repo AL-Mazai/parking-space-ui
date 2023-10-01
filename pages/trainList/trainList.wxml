@@ -1,0 +1,59 @@
+<checkbox-group bindchange="onSortChange">
+  <view class="sort">
+    <label class="checkbox-label">
+      <checkbox value="time" class="checkbox"></checkbox>
+      <text class="option">时间优先</text>
+    </label>
+    <label class="checkbox-label">
+      <checkbox value="price" class="checkbox"></checkbox>
+      <text class="option">价格优先</text>
+    </label>
+    <label class="checkbox-label">
+      <checkbox value="distance" class="checkbox"></checkbox>
+      <text class="option">距离优先</text>
+    </label>
+  </view>
+</checkbox-group>
+
+<view class="content">
+    <block wx:for="{{ trainList }}">
+      <view class="bg">
+      <view class="item">
+        <view class="wr left">
+          <view>{{ item.startStation }}</view>
+          <view class="blue">{{ item.startTime }}</view>
+        </view>
+        <view class="wr center">
+          <view>{{ item.trainNumber }}</view>
+          <view class="line"></view>
+          <view class="blue">{{ item.costTime }}</view>
+        </view>
+        <view class="wr right">
+          <view>{{ item.endStation }}</view>
+          <view class="blue">{{ item.endTime }}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<wxs module="strs">
+  var nowticket=function(data,date){
+    var n;
+    for(var i=0;i<data.length;i++){
+      if(mysplit(data[i])[0]==date){
+        n=i;
+      }
+    }
+    console.log(mysplit(data[n]));
+    return mysplit(data[n]);
+  }
+
+  var mysplit=function(s){
+    return s.split(" ");//分割字符串
+  }
+
+  module.exports={
+    nowticket:nowticket
+  }
+</wxs>

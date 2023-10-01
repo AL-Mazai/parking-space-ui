@@ -1,0 +1,66 @@
+<view class="content">
+  <!-- <swiper current="{{ currentTab }}" style="height:400px"> -->
+    <!-- <swiper-item> -->
+      <view class="formbg">
+        <form bindsubmit="formSubmit" action="">
+
+          <!-- 起始地 -->
+          <view class="station">
+            <view>
+              <text class="city-descript">出发城市</text>
+              <input name="startStation" value="{{ start }}" bindinput="bindStartInput"/>
+            </view>
+            <view>
+              <image src="/images/icon/hcp/xz.jpg" style="width:44px;height:45px;" bindtap="change" data-start="{{ start }}" data-end="{{ end }}"></image>
+            </view>
+            <view>
+              <text class="city-descript">到达城市</text>
+              <input name="endStation" value="{{ end }}" bindinput="bindEndInput"/>
+            </view>
+          </view>
+
+          <view class="hr"></view>
+
+          <!-- 日期 -->
+          <view class="date">
+            <picker mode="date" name="date" value="{{ date }}" start="2023-1-1" end="2023-12-31" bindchange="bindDateChange">
+              <view>{{ date }}</view>
+            </picker>
+          </view>
+
+          <view class="hr"></view>
+
+          <button class="btn" form-type="submit">查询</button>
+
+          <view class="record">
+            <text>北京->佳木斯</text>
+            <text>佳木斯->北京</text>
+            <text>清除历史</text>
+          </view>
+          
+        </form>
+      </view>
+    <!-- </swiper-item> -->
+  <!-- </swiper> -->
+
+  <view class="query-box extension">
+        <view class="query-row">
+            <view class="extension-item">
+                <image src="../../images/extension/train-extension1.png"></image>
+                <text>极速抢车位</text>
+            </view>
+            <view class="extension-item">
+                <image src="../../images/extension/train-extension2.png"></image>
+                <text>在线选车位</text>
+            </view>
+            <view class="extension-item">
+                <image src="../../images/extension/train-extension3.png"></image>
+                <text>一元夺宝</text>
+            </view>
+            <view class="extension-item">
+                <image src="../../images/extension/train-extension4.png"></image>
+                <text>超值酒店</text>
+            </view>
+        </view>
+    </view>
+</view>
