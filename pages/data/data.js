@@ -58,6 +58,78 @@ var data=[{
     "2019-12-31 10 33 54",
     "2020-1-1 105 49 32"
   ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
+},{
+  "trainNumber":"车库容量：10",
+  "startStation":"哈尔滨西",
+  "startTime":"09:49",
+  "endStation":"北京",
+  "endTime":"17:28",
+  "costTime":"7小时39分",
+  "ticketNum":[
+    "2019-12-30 12 3 72",
+    "2019-12-31 10 33 54",
+    "2020-1-1 105 49 32"
+  ]
 }]
 
 module.exports={
