@@ -15,9 +15,9 @@ Page({
       '/images/haibao/3.jpg'
     ],
     currentTab:0,
-    start:"哈尔滨西",
-    end:"北京",
-    date:"2019-12-31"
+    start:"昆明",
+    end:"大理",
+    date:"2023-9-31"
   },
   switchNav:function(e){
     this.setData({currentTab:e.currentTarget.id})

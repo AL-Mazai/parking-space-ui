@@ -1,8 +1,8 @@
 var data=[{
   "trainNumber":"车库容量：100",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"01:43",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"21:25",
   "costTime":"19小时42分",
   "ticketNum":[
@@ -12,9 +12,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：120",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"06:57",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"14:51",
   "costTime":"7小时54分",
   "ticketNum":[
@@ -24,9 +24,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：0",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"07:08",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"14:44",
   "costTime":"7小时36分",
   "ticketNum":[
@@ -36,9 +36,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -48,9 +48,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -60,9 +60,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -72,9 +72,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -84,9 +84,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -96,9 +96,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -108,9 +108,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[
@@ -120,9 +120,9 @@ var data=[{
   ]
 },{
   "trainNumber":"车库容量：10",
-  "startStation":"哈尔滨西",
+  "startStation":"昆明",
   "startTime":"09:49",
-  "endStation":"北京",
+  "endStation":"大理",
   "endTime":"17:28",
   "costTime":"7小时39分",
   "ticketNum":[

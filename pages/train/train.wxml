@@ -33,8 +33,11 @@
           <button class="btn" form-type="submit">查询</button>
 
           <view class="record">
-            <text>北京->佳木斯</text>
-            <text>佳木斯->北京</text>
+            <text>昆明->大理</text>
+            <text>大理->昆明</text>
+            <text>丽江->昆明</text>
+            <text>大理->丽江</text>
+            <text>大理->昆明</text>
             <text>清除历史</text>
           </view>
           
