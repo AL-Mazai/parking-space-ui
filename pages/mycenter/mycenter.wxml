@@ -2,7 +2,7 @@
 <view class="container">
     <view class="page-top">
      <!-- 用户头像 -->
-    <image src="/images/back_img.png" class="user-avatar"></image>
+    <image src="/images/switch.png" class="user-avatar"></image>
     
     <!-- 用户信息和账号设置 -->
     <view class="user-info-and-settings">
