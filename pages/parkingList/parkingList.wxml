@@ -16,9 +16,9 @@
 </checkbox-group>
 
 <view class="content">
-    <block wx:for="{{ trainList }}">
-      <view class="bg">
-      <view class="item">
+  <block wx:for="{{ parkingList }}">
+    <view class="bg">
+      <view class="item" data-parking="{{item}}" bindtap="navigateToParkingInfo">
         <view class="wr left">
           <view>{{ item.startStation }}</view>
           <view class="blue">{{ item.startTime }}</view>
@@ -38,22 +38,22 @@
 </view>
 
 <wxs module="strs">
-  var nowticket=function(data,date){
+  var nowticket = function (data, date) {
     var n;
-    for(var i=0;i<data.length;i++){
-      if(mysplit(data[i])[0]==date){
-        n=i;
+    for (var i = 0; i < data.length; i++) {
+      if (mysplit(data[i])[0] == date) {
+        n = i;
       }
     }
     console.log(mysplit(data[n]));
     return mysplit(data[n]);
   }
 
-  var mysplit=function(s){
+  var mysplit = function (s) {
     return s.split(" ");//分割字符串
   }
 
-  module.exports={
-    nowticket:nowticket
+  module.exports = {
+    nowticket: nowticket
   }
 </wxs>

@@ -1,9 +1,11 @@
 {
   "pages":[
-    "pages/train/train",
+    "pages/parking/parking",
     "pages/mycenter/mycenter",
-    "pages/trainList/trainList",
-    "pages/record/record"
+    "pages/parkingList/parkingList",
+    "pages/record/record",
+    "pages/parkingInfo/parkingInfo",
+    "pages/feedback/feedback"
   ],
   "window":{
     "navigationBarTitleText": "停车位",
@@ -16,7 +18,7 @@
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [{
-      "pagePath": "pages/train/train",
+      "pagePath": "pages/parking/parking",
       "text":"停车服务",
       "iconPath": "./images/bar/hcp-0.jpg",
       "selectedIconPath": "./images/bar/hcp-1.jpg"
@@ -34,6 +36,5 @@
       "selectedIconPath": "./images/bar/grzx-1.jpg"
     }
   ]
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }

@@ -6,6 +6,11 @@ Page({
       phone:"15877712345"
     }
   },
+  navigateToFeedbackPage: function () {
+    wx.navigateTo({
+      url: '/pages/feedback/feedback', // 此处是反馈页面的路径
+    });
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

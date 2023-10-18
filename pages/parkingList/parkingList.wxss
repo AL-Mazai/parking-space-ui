@@ -22,10 +22,13 @@
 
 /****************数据展示*********************/
 .content{
-  height: 600px;
+  /* height: 600px; */
   background-color: #f4f4f4;
   padding-top: 10px;
   margin: 0 auto;
+
+  /* border: 1px red solid; */
+
 }
 .bg{
   height: 70px;
@@ -40,6 +43,9 @@
 
   padding: 10px;
   font-size: 14px;
+
+  /* border: 1px red solid; */
+
 }
 .wr{
   flex: 1;

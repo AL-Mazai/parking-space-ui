@@ -25,6 +25,7 @@
                 <text class="action">领取加速包</text>
             </view>
         </view>
+        <view class="hr"></view>
         <view class="personnel-item">
             <image src="../../images/icon/trip.png"></image>
             <view class="personnel-descript">
@@ -32,6 +33,7 @@
                 <text class="action">正晚点/时刻表</text>
             </view>
         </view>
+        <view class="hr"></view>
         <view class="personnel-item">
             <image src="../../images/icon/invite.png"></image>
             <view class="personnel-descript">
@@ -39,6 +41,7 @@
                 <text class="action">一起来抢票</text>
             </view>
         </view>
+        <view class="hr"></view>
         <view class="personnel-item">
             <image src="../../images/icon/message.png"></image>
             <view class="personnel-descript">
@@ -46,13 +49,15 @@
                 <text class="action"></text>
             </view>
         </view>
-        <view class="personnel-item">
+        <view class="hr"></view>
+        <view class="personnel-item" bindtap="navigateToFeedbackPage">
             <image src="../../images/icon/advise.png"></image>
             <view class="personnel-descript">
                 <text>产品意见</text>
                 <text class="action"></text>
             </view>
         </view>
+        <view class="hr"></view>
         <view class="personnel-item">
             <image src="../../images/icon/more.png"></image>
             <view class="personnel-descript" style="border:none">

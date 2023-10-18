@@ -1,4 +1,3 @@
-// pages/trainList/trainList.js
 var jsonData = require('../data/data.js');
 var date="";
 
@@ -7,8 +6,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    trainList:[],
+    parkingList:[],
     date:""
+  },
+    /**
+   * 跳转到车库信息页面
+   */
+  navigateToParkingInfo: function (e) {
+    const parking = e.currentTarget.dataset.parking;
+    console.log(parking)
+    wx.navigateTo({
+      url: '/pages/parkingInfo/parkingInfo'
+    });
   },
 
   /**
@@ -18,24 +27,24 @@ Page({
     var startStation=e.startStation;//从超链接中获取查询的数据
     var endStation=e.endStation;
     date=e.date;
-    var data=jsonData.trainList;//读取data.js中定义的json数据
+    var data=jsonData.parkingList;//读取data.js中定义的json数据
     var result=data.filter(p => {  //过滤json数据
       return (p.startStation==startStation && p.endStation==endStation)
     });
     this.setData({
       date:date,
-      trainList:result
+      parkingList:result
     })
     console.log('start='+startStation+"--end="+endStation+"--date="+date);
- },
-myGetDate:function(num){
+  },
+  myGetDate:function(num){
   var datetime=new Date(date);
   datetime.setDate(datetime.getDate()+num);//计算num天后的日期
   var y=datetime.getFullYear();
   var m=datetime.getMonth()+1;
   var d=datetime.getDate();
   return y+"-"+m+"-"+d;
-},
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

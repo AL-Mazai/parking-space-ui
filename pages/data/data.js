@@ -133,5 +133,5 @@ var data=[{
 }]
 
 module.exports={
-  trainList:data
+  parkingList:data
 }

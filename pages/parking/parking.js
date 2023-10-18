@@ -43,7 +43,7 @@ Page({
     var endStation=e.detail.value.endStation;//目的地
     var date=e.detail.value.date;//日期
     wx.navigateTo({//跳转到查询结果页面
-      url: '../trainList/trainList?startStation='+startStation+'&endStation='+endStation+'&date='+date,
+      url: '../parkingList/parkingList?startStation='+startStation+'&endStation='+endStation+'&date='+date,
     })
   },
   /**

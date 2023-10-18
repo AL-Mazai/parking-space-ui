@@ -1,0 +1,5 @@
+<view class="feedback-container">
+    <view class="header">反馈意见</view>
+    <textarea class="feedback-input" placeholder="请输入您的反馈信息" bindinput="inputFeedback" value="{{feedbackText}}"></textarea>
+    <button class="submit-button" bindtap="submitFeedback">提交反馈</button>
+</view>
