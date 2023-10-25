@@ -1,4 +1,7 @@
 <view class="garage-details">
+  <view class="parking-img">
+    <image src="/images/switch.png" />
+  </view>
   <view class="garage-name">
     <text>{{garageInfo.name}}</text>
   </view>

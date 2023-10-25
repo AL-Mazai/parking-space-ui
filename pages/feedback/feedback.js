@@ -15,13 +15,18 @@ Page({
         wx.showToast({
           title: "反馈已提交",
           icon: "success",
-          duration: 2000,
+          duration: 1000,
+        });
+
+        // 提交成功后清空 feedbackText
+        this.setData({
+          feedbackText: ''  // 设置 feedbackText 为空字符串
         });
       } else {
         wx.showToast({
           title: "请填写反馈信息",
           icon: "none",
-          duration: 2000,
+          duration: 1000,
         });
       }
     },

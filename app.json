@@ -36,5 +36,6 @@
       "selectedIconPath": "./images/bar/grzx-1.jpg"
     }
   ]
-  }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

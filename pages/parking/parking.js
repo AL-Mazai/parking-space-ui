@@ -17,7 +17,7 @@ Page({
     currentTab:0,
     start:"昆明",
     end:"大理",
-    date:"2023-9-31"
+    time: "11:00"
   },
   switchNav:function(e){
     this.setData({currentTab:e.currentTarget.id})
@@ -35,8 +35,9 @@ Page({
     })
   },
   bindDateChange:function(e){
-    this.setData({date:e.detail.value});
-    console.log(this.data.date);
+    console.log(e)
+    this.setData({time: e.detail.value});
+    console.log(this.data.time);
   },
   formSubmit:function(e) {
     var startStation=e.detail.value.startStation;//始发地

@@ -21,10 +21,10 @@
 
       <view class="hr"></view>
 
-      <!-- 日期 -->
+      <!-- 日期时间 -->
       <view class="date">
-        <picker mode="date" name="date" value="{{ date }}" start="2023-1-1" end="2023-12-31" bindchange="bindDateChange">
-          <view>{{ date }}</view>
+        <picker mode="time" name="time" value="{{ time }}" start="00::00" end="23:59" bindchange="bindDateChange">
+          <view>出发时间：{{ time }}</view>
         </picker>
       </view>
 

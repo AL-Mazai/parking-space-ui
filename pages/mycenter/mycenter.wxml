@@ -53,7 +53,7 @@
         <view class="personnel-item" bindtap="navigateToFeedbackPage">
             <image src="../../images/icon/advise.png"></image>
             <view class="personnel-descript">
-                <text>产品意见</text>
+                <text>反馈</text>
                 <text class="action"></text>
             </view>
         </view>

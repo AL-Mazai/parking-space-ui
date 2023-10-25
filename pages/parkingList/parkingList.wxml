@@ -12,6 +12,10 @@
       <checkbox value="distance" class="checkbox"></checkbox>
       <text class="option">距离优先</text>
     </label>
+    <label class="checkbox-label">
+      <checkbox value="distance" class="checkbox"></checkbox>
+      <text class="option">概率优先</text>
+    </label>
   </view>
 </checkbox-group>
 
@@ -26,7 +30,10 @@
         <view class="wr center">
           <view>{{ item.trainNumber }}</view>
           <view class="line"></view>
-          <view class="blue">{{ item.costTime }}</view>
+          <!-- <view class="blue">{{ item.costTime }}</view> -->
+        </view>
+        <view class="wr center">
+          停车概率：100%
         </view>
         <view class="wr right">
           <view>{{ item.endStation }}</view>
