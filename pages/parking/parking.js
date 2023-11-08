@@ -1,6 +1,5 @@
 // pages/train/train.js
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -17,8 +16,29 @@ Page({
     currentTab:0,
     start:"昆明",
     end:"大理",
-    time: "11:00"
+    time: "11:00",
+    // 后端接口测试数据
+    businessTypeList:[],
   },
+   /**
+   * 调用后端接口测试
+   */
+  getBusinessList() {
+    console.log("开始发送请求....")
+    // 1 发送异步请求获取数据
+    wx.request({
+      url: 'http://localhost:10010/businessType/getAllType', //请求的接口地址
+      success: (result) => {
+        const businessTypeList = result.data.data;
+        console.log(businessTypeList);
+        this.setData({
+          businessTypeList: businessTypeList
+        });
+      }
+    });
+  },
+
+
   switchNav:function(e){
     this.setData({currentTab:e.currentTarget.id})
   },
@@ -50,9 +70,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-
   onLoad: function (options) {
-    
   },
 
   /**

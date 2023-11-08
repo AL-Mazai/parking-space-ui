@@ -17,7 +17,8 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
+    "list": [
+    {
       "pagePath": "pages/parking/parking",
       "text":"停车服务",
       "iconPath": "./images/bar/hcp-0.jpg",
@@ -36,6 +37,5 @@
       "selectedIconPath": "./images/bar/grzx-1.jpg"
     }
   ]
-  },
-  "lazyCodeLoading": "requiredComponents"
+  }
 }

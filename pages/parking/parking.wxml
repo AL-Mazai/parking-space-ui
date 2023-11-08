@@ -66,4 +66,14 @@
       </view>
     </view>
   </view>
+
+
+  <!-- 后端接口测试 -->
+  <!-- <view>
+    <button class="btn" bindtap="getBusinessList">获取商家类型</button>
+    <block wx:for="{{businessTypeList}}" wx:key="id">
+      {{item.typeName}}
+    </block>
+  </view> -->
+
 </view>
