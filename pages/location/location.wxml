@@ -1,0 +1,4 @@
+<!--pages/location.wxml-->
+<!-- 地图测试 -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="6" markers="{{markers}}" bindmarkertap="markertap" show-location>
+</map>

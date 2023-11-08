@@ -62,18 +62,21 @@
       </view>
       <view class="extension-item">
         <image src="../../images/extension/train-extension4.png"></image>
-        <text>超值酒店</text>
+        <text>超值饭店</text>
       </view>
     </view>
   </view>
 
+</view>
 
-  <!-- 后端接口测试 -->
-  <!-- <view>
+
+<!-- 后端接口测试 -->
+<!-- <view>
     <button class="btn" bindtap="getBusinessList">获取商家类型</button>
     <block wx:for="{{businessTypeList}}" wx:key="id">
       {{item.typeName}}
     </block>
   </view> -->
 
-</view>
+<!-- 地图测试 -->
+<button class="btn" bindtap="getMap">地图</button>
