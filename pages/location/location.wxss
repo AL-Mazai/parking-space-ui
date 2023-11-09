@@ -1,5 +1,5 @@
 /* pages/location.wxss */
-page {
+/* page {
     height: 100%;
     width: 100%;
 }
@@ -7,4 +7,13 @@ page {
 #map {
     height: 100%;
     width: 100%;
-}
+} */
+.map_container{ 
+    height: 400px; 
+    width: 100%; 
+} 
+  
+.map { 
+    height: 100%; 
+    width: 100%; 
+} 
