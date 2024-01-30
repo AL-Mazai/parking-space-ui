@@ -6,7 +6,6 @@
 var bmap = require('../../libs/bmap-wx.js');
 var wxMarkerData = [];
 Page({
-
     /**
      * 页面的初始数据
      */
@@ -45,7 +44,7 @@ Page({
         }
         // 发起POI检索请求 
         BMap.search({
-            "query": '学校',
+            "query": '酒店',
             fail: fail,
             success: success,
             // 此处需要在相应路径放置图片文件 

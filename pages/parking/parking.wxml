@@ -71,12 +71,12 @@
 
 
 <!-- 后端接口测试 -->
-<!-- <view>
-    <button class="btn" bindtap="getBusinessList">获取商家类型</button>
-    <block wx:for="{{businessTypeList}}" wx:key="id">
-      {{item.typeName}}
-    </block>
-  </view> -->
+<view>
+  <button class="btn" bindtap="getBusinessList" style="margin-bottom: 10px;">后端接口测试</button>
+  <block wx:for="{{businessTypeList}}" wx:key="id">
+    {{item.typeName}}
+  </block>
+</view>
 
 <!-- 地图测试 -->
 <button class="btn" bindtap="getMap">地图</button>

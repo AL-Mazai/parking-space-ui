@@ -7,7 +7,16 @@ Page({
    */
   data: {
     parkingList:[],
-    date:""
+    date:"",
+    items: [
+      {name: 'time_priority', value: '时间优先', checked: 'true'},
+      {name: 'distance_priority', value: '距离优先'},
+      {name: 'probability_priority', value: '概率优先'},
+      {name: 'fast_parking', value: '快捷停车'},
+    ]
+  },
+  radioChange(e) {
+    console.log('radio发生change事件，携带value值为：', e.detail.value)
   },
     /**
    * 跳转到车库信息页面

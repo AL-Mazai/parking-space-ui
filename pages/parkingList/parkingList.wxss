@@ -2,23 +2,19 @@
 .sort {
   display: flex;
   align-items: center;
-  margin: 10px;
+  /* margin: 10px; */
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
-  margin-right: 15px; /* 添加间距以分隔多选框 */
-}
+  margin-right: 10px; /* 添加间距以分隔多选框 */
+  margin-left: 10px;
 
-.checkbox {
-  margin-right: 5px;
-}
-
-.option {
   font-size: 12px;
-  color: #333;
+  /* border: 1px red solid; */
 }
+
 
 /****************数据展示*********************/
 .content{
@@ -28,21 +24,20 @@
   margin: 0 auto;
 
   /* border: 1px red solid; */
-
 }
 .bg{
-  height: 70px;
+  height: 40px;
   background-color: #fff;
-  margin: 0 auto;
-  border-radius: 5px;
+  /* margin: 0 auto; */
+  /* border-radius: 5px; */
   margin-bottom: 10px;
 }
 .item{
   display: flex;
   flex-direction: row;
 
-  padding: 10px;
-  font-size: 14px;
+  padding: 5px;
+  font-size: 12px;
 
   /* border: 1px red solid; */
 
@@ -52,12 +47,14 @@
 }
 .left{
   text-align: left;
+  margin-left: 5px;
 }
 .center{
   text-align: center;
 }
 .right{
   text-align: right;
+  margin-right: 5px;
 }
 
 .hr{

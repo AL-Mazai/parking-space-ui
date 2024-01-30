@@ -1,21 +1,28 @@
 <checkbox-group bindchange="onSortChange">
-  <view class="sort">
-    <label class="checkbox-label">
+  <view>
+    <!-- <label class="checkbox-label">
       <checkbox value="time" class="checkbox"></checkbox>
       <text class="option">时间优先</text>
     </label>
     <label class="checkbox-label">
       <checkbox value="price" class="checkbox"></checkbox>
-      <text class="option">价格优先</text>
-    </label>
-    <label class="checkbox-label">
-      <checkbox value="distance" class="checkbox"></checkbox>
       <text class="option">距离优先</text>
     </label>
     <label class="checkbox-label">
       <checkbox value="distance" class="checkbox"></checkbox>
       <text class="option">概率优先</text>
     </label>
+    <label class="checkbox-label">
+      <checkbox value="distance" class="checkbox"></checkbox>
+      <text class="option">快捷停车</text>
+    </label> -->
+
+    <radio-group class="sort" bindchange="radioChange">
+      <label class="checkbox-label" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />
+        {{item.value}}
+      </label>
+    </radio-group>
   </view>
 </checkbox-group>
 
@@ -28,12 +35,14 @@
           <view class="blue">{{ item.startTime }}</view>
         </view>
         <view class="wr center">
+          车库容量
           <view>{{ item.trainNumber }}</view>
-          <view class="line"></view>
+          <!-- <view class="line"></view> -->
           <!-- <view class="blue">{{ item.costTime }}</view> -->
         </view>
         <view class="wr center">
-          停车概率：100%
+          停车概率
+          <view>{{ item.parking_success }}</view>
         </view>
         <view class="wr right">
           <view>{{ item.endStation }}</view>
