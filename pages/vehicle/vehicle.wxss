@@ -1,0 +1,57 @@
+/* pages/vehicle/vehicle.wxss */
+.container {
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 10px;
+}
+
+.search-input {
+  width: 95%;
+  height: 15px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.table-container {
+  border: 1px solid #ccc;
+}
+
+.scroll-view {
+  /* height: 100%; */
+  font-size: 12px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #f0f0f0;
+}
+
+.header-item {
+  flex: 1;
+  /* text-align: center; */
+
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.table-content {
+  padding: 5px;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}

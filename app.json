@@ -6,7 +6,9 @@
     "pages/record/record",
     "pages/parkingInfo/parkingInfo",
     "pages/feedback/feedback",
-    "pages/location/location"
+    "pages/location/location",
+    "pages/login/login",
+    "pages/vehicle/vehicle"
   ],
   "window": {
     "navigationBarTitleText": "停车位",
@@ -18,7 +20,8 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/parking/parking",
         "text": "停车服务",
         "iconPath": "./images/bar/hcp-0.jpg",
@@ -48,8 +51,7 @@
   },
   "requiredPrivateInfos": [
     "chooseLocation",
-    "getLocation"
+    "getFuzzyLocation"
   ],
-
   "lazyCodeLoading": "requiredComponents"
 }

@@ -48,6 +48,22 @@ Page({
       url: '../location/location'
     })
   },
+    /**
+   * 登录测试
+   */
+  login() {
+    wx.navigateTo({ //跳转登录
+      url: '../login/login'
+    })
+  },
+      /**
+   * 车辆管理测试
+   */
+  vehicle() {
+    wx.navigateTo({ //跳转车辆管理页面
+      url: '../vehicle/vehicle'
+    })
+  },
 
   switchNav: function (e) {
     this.setData({

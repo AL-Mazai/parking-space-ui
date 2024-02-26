@@ -1,0 +1,12 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="logo-container">
+    <text class="title">欢迎登录小程序</text>
+  </view>
+
+  <view class="input-container">
+    <input class="input" placeholder="请输入电话号码" bindinput="inputUsername"></input>
+    <input class="input" type="password" placeholder="请输入密码" bindinput="inputPassword"></input>
+    <button class="login-button" bindtap="login">登录</button>
+  </view>
+</view>
