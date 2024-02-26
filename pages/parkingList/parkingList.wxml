@@ -1,6 +1,6 @@
 <checkbox-group bindchange="onSortChange">
-  <view>
-    <!-- <label class="checkbox-label">
+<view>
+  <!-- <label class="checkbox-label">
       <checkbox value="time" class="checkbox"></checkbox>
       <text class="option">时间优先</text>
     </label>
@@ -16,14 +16,14 @@
       <checkbox value="distance" class="checkbox"></checkbox>
       <text class="option">快捷停车</text>
     </label> -->
-    <view class="hr"></view>
+  <view class="hr"></view>
     <radio-group class="sort" bindchange="radioChange">
       <label class="checkbox-label" wx:for="{{items}}">
-        <radio value="{{item.name}}" checked="{{item.checked}}" />
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>
         {{item.value}}
       </label>
     </radio-group>
-  </view>
+</view>
 </checkbox-group>
 
 <view class="content">

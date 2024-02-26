@@ -53,6 +53,10 @@
 
   border-radius: 5px;
 }
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 
 .record{
   text-align: center;

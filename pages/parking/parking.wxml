@@ -1,7 +1,7 @@
 <view class="content">
   <!-- <swiper current="{{ currentTab }}" style="height:400px"> -->
   <!-- <swiper-item> -->
-    <view class="hr"></view>
+  <view class="hr"></view>
 
   <view class="formbg">
     <form bindsubmit="formSubmit" action="">
@@ -31,9 +31,10 @@
       </view>
 
       <view class="hr"></view>
-
-      <button class="btn" form-type="submit">查询</button>
-
+      <view class="button-container">
+        <van-button type="info" form-type="submit" custom-style="padding:5px;width:120px;height:30px;">查询</van-button>
+      </view>
+      
       <view class="record">
         <text>昆明->大理</text>
         <text>大理->昆明</text>
@@ -68,23 +69,22 @@
       </view>
     </view>
   </view>
-
 </view>
 
-
-<!-- 后端接口测试 -->
 <view>
-  <button class="btn" bindtap="getBusinessList" style="margin-bottom: 2px;">后端接口测试</button>
-  <block wx:for="{{businessTypeList}}" wx:key="id">
-    {{item.typeName}}
-  </block>
+  <view class="button-container">
+    <!-- 车辆管理页面测试 -->
+    <van-button type="info" bindtap="vehicle" custom-style="width:120px;height:30px;margin:0 1px 1px 0">车辆管理测试</van-button>
+    <!-- 登录测试 -->
+    <van-button type="info" bindtap="login" custom-style="width:120px;height:30px;">登录测试</van-button>
+  </view>
+  <view class="button-container">
+    <!-- 后端接口测试 -->
+    <van-button type="info" bindtap="getBusinessList" custom-style="width:120px;height:30px;margin:0 1px 1px 0">后端接口测试</van-button>
+    <block wx:for="{{businessTypeList}}" wx:key="id">
+      {{item.typeName}}
+    </block>
+    <!-- 地图测试 -->
+    <van-button type="info" bindtap="getMap" custom-style="width:120px;height:30px;">地图测试</van-button>
+  </view>
 </view>
-
-<!-- 地图测试 -->
-<button class="btn" bindtap="getMap" style="margin-bottom: 2px;">地图测试</button>
-
-<!-- 登录测试 -->
-<button class="btn" bindtap="login" style="margin-bottom: 2px;">登录测试</button>
-
-<!-- 车辆管理页面测试 -->
-<button class="btn" bindtap="vehicle" style="margin-bottom: 2px;">车辆管理测试</button>

@@ -24,7 +24,10 @@
           <view class="td">{{item.plateNumber}}</view>
           <view class="td">{{item.ownerName}}</view>
           <view class="td">{{item.ownerPhone}}</view>
-          <view class="td"><button class='btn' bindtap="edit">edit</button></view>
+          <!-- <view class="td"><button class='btn' bindtap="edit">edit</button></view> -->
+          <view class="td">
+            <van-button type="info" size="mini" bindtap="edit">编辑</van-button>
+          </view>
         </view>
       </block>
     </scroll-view>

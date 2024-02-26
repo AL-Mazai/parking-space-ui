@@ -17,7 +17,6 @@
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
@@ -53,5 +52,8 @@
     "chooseLocation",
     "getFuzzyLocation"
   ],
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {
+    "van-button": "/dist/button/index"
+  }
 }

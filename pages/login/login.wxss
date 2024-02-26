@@ -42,3 +42,8 @@
 .login-button:hover {
   background-color: #0056b3;
 }
+/* 添加flex布局并设置水平居中 */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
