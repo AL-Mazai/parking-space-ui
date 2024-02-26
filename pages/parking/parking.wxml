@@ -1,6 +1,8 @@
 <view class="content">
   <!-- <swiper current="{{ currentTab }}" style="height:400px"> -->
   <!-- <swiper-item> -->
+    <view class="hr"></view>
+
   <view class="formbg">
     <form bindsubmit="formSubmit" action="">
 

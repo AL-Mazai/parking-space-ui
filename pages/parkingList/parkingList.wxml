@@ -16,7 +16,7 @@
       <checkbox value="distance" class="checkbox"></checkbox>
       <text class="option">快捷停车</text>
     </label> -->
-
+    <view class="hr"></view>
     <radio-group class="sort" bindchange="radioChange">
       <label class="checkbox-label" wx:for="{{items}}">
         <radio value="{{item.name}}" checked="{{item.checked}}" />

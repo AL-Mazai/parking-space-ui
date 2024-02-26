@@ -6,25 +6,27 @@
   </view>
 
   <!-- 表格 -->
-  <view class="table-container">
+  <view class="table">
     <scroll-view scroll-y class="scroll-view">
-      <view class="table-header">
-        <text class="header-item">图标</text>
-        <text class="header-item">车牌号</text>
-        <text class="header-item">车主</text>
-        <text class="header-item">车主号码</text>
+      <view class="tr">
+        <view class="th">图标</view>
+        <view class="th">车牌号</view>
+        <view class="th">车主</view>
+        <view class="th">车主号码</view>
+        <view class="th">操作</view>
       </view>
-      
-      <view class="table-content">
-        <block wx:for="{{carList}}" wx:key="index">
-          <view class="table-row">
+
+      <block wx:for="{{carList}}" wx:key="index">
+        <view class="tr">
+          <view class="td">
             <image class="logo" src="{{item.logo}}"></image>
-            <text class="item">{{item.plateNumber}}</text>
-            <text class="item">{{item.ownerName}}</text>
-            <text class="item">{{item.ownerPhone}}</text>
           </view>
-        </block>
-      </view>
+          <view class="td">{{item.plateNumber}}</view>
+          <view class="td">{{item.ownerName}}</view>
+          <view class="td">{{item.ownerPhone}}</view>
+          <view class="td"><button class='btn' bindtap="edit">edit</button></view>
+        </view>
+      </block>
     </scroll-view>
   </view>
 </view>

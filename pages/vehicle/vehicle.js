@@ -6,13 +6,13 @@ Page({
    */
   data: {
     carList: [{
-        logo: '/images/switch.png',
+        logo: 'http://qny.cai142857.cn/%E8%BD%A6.png',
         plateNumber: '云A12345',
-        ownerName: '张三',
+        ownerName: '张三丰',
         ownerPhone: '13812345678'
       },
       {
-        logo: '/images/switch.png',
+        logo: 'http://qny.cai142857.cn/image/1.png',
         plateNumber: '云A67890',
         ownerName: '李四',
         ownerPhone: '13987654321'
@@ -32,11 +32,14 @@ Page({
       {
         logo: '/images/switch.png',
         plateNumber: '云A67845',
-        ownerName: '小华',
+        ownerName: '西门吹雪',
         ownerPhone: '13984567213'
       },
       // 添加更多车辆信息...
-    ]
+    ],
+  },
+  edit: function (e) {
+    console.log(e)
   },
   search(e) {
     // 搜索逻辑，根据输入的内容过滤车辆列表

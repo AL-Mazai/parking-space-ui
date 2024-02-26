@@ -1,6 +1,6 @@
 /* pages/vehicle/vehicle.wxss */
 .container {
-  padding: 20px;
+  padding: 5px;
 }
 
 .search-container {
@@ -8,50 +8,65 @@
 }
 
 .search-input {
-  width: 95%;
+  /* width: 100%; */
   height: 15px;
   padding: 3px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 12px;
+  border-radius: 2px;
+  font-size: 10px;
 }
 
-.table-container {
-  border: 1px solid #ccc;
-}
 
-.scroll-view {
-  /* height: 100%; */
-  font-size: 12px;
-}
-
-.table-header {
+.table {
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
-  background-color: #f0f0f0;
+  flex-direction: column;     /* 排列形式: 向下 */
 }
 
-.header-item {
-  flex: 1;
-  /* text-align: center; */
-
-  margin-right: 10px;
-  margin-left: 5px;
-}
-
-.table-content {
-  padding: 5px;
-}
-
-.table-row {
+.tr {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+}
+
+.th, .td {  /* 公有的属性 */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 20%;
+  text-align: center;
+  justify-content:center;
   align-items: center;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #dadada;      /* 单元格上线框 */
+  border-bottom: 1px solid #dadada;   /* 单元格下线框 */
+  /* border-left: 1px solid #dadada;     单元格左线框 */
+  /* border-right: 1px solid #dadada;    单元格右线框 */
+
+  font-size: 10px;
+}
+
+.th {
+  height: 20px;
+  font-weight: 800;
+  background-color:#B3CCF4;
 }
 
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.btn {
+  width:20px !important;
+  height: 20px !important;
+  background-color: rgb(75, 125, 199);
+  color: white;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+
+  /* padding: 10px !important; */
+
+  /* border: 1px solid red; */
 }
