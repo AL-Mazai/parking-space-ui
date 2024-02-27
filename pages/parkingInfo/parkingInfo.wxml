@@ -3,20 +3,20 @@
     <image src="/images/switch.png" />
   </view>
   <view class="garage-name">
-    <text>{{garageInfo.name}}</text>
+    <text>{{garageInfo1.name}}</text>
   </view>
   <view class="hr"></view>
   <view class="info">
-    <text class="garage-number">编号：{{garageInfo.number}}</text>
+    <text class="garage-number">编号：{{garageInfo1.number}}</text>
   </view>
   <view class="info">
-    <text class="garage-info-capacity">容量：{{garageInfo.capacity}} 辆</text>
-    <text class="garage-info-num">空位数量：{{garageInfo.emptySpaces}} 个</text>
+    <text class="garage-info-capacity">容量：{{garageInfo1.capacity}} 辆</text>
+    <text class="garage-info-num">空位数量：{{garageInfo1.emptySpaces}} 个</text>
   </view>
   <view class="info">
-    <text class="garage-info-item">价格：{{garageInfo.price}} 元/小时</text>
+    <text class="garage-info-item">价格：{{garageInfo1.ratePerHour}} 元/小时</text>
   </view>
   <view class="info">
-    <text class="garage-location">位置：{{garageInfo.location}}</text>
+    <text class="garage-location">位置：{{garageInfo1.location}}</text>
   </view>
 </view>

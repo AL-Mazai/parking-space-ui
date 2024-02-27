@@ -19,7 +19,7 @@ Page({
     end: "大理",
     time: "11:00",
     // 后端接口测试数据
-    businessTypeList: [],
+    parkingListInfo: [],
   },
 
   /**
@@ -29,12 +29,12 @@ Page({
     console.log("开始发送请求....")
     // 1 发送异步请求获取数据
     wx.request({
-      url: 'http://localhost:10010/businessType/getAllType', //请求的接口地址
+      url: 'https://1eef6bdc.r27.cpolar.top/getParkingLot', //请求的接口地址
       success: (result) => {
-        const businessTypeList = result.data.data;
-        console.log(businessTypeList);
+        const parkingListInfo = result.data;
+        console.log(parkingListInfo);
         this.setData({
-          businessTypeList: businessTypeList
+          parkingListInfo: parkingListInfo
         });
       }
     });

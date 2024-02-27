@@ -19,8 +19,7 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/parking/parking",
         "text": "停车服务",
         "iconPath": "./images/bar/hcp-0.jpg",
@@ -48,10 +47,7 @@
       "desc": "你的位置信息将用于小程序位置接口的效果展示"
     }
   },
-  "requiredPrivateInfos": [
-    "chooseLocation",
-    "getFuzzyLocation"
-  ],
+  "requiredPrivateInfos": ["chooseLocation", "getFuzzyLocation"],
   "lazyCodeLoading": "requiredComponents",
   "usingComponents": {
     "van-button": "/dist/button/index"
