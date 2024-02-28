@@ -35,7 +35,7 @@
           <view class="blue">{{ item.startTime }}</view>
         </view>
         <view class="wr center">
-          车库容量
+          可用车位
           <view>{{ item.trainNumber }}</view>
           <!-- <view class="line"></view> -->
           <!-- <view class="blue">{{ item.costTime }}</view> -->
