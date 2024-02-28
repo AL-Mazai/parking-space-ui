@@ -94,13 +94,15 @@ Page({
     console.log(this.data.time);
   },
   formSubmit: function (e) {
+    // console.log(e.detail)
     var startStation = e.detail.value.startStation; //始发地
     var endStation = e.detail.value.endStation; //目的地
-    var date = e.detail.value.date; //日期
+    var time = e.detail.value.time; //日期
     wx.navigateTo({ //跳转到查询结果页面
-      url: '../parkingList/parkingList?startStation=' + startStation + '&endStation=' + endStation + '&date=' + date,
+      url: '../parkingList/parkingList?startStation=' + startStation + '&endStation=' + endStation + '&time=' + time,
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */

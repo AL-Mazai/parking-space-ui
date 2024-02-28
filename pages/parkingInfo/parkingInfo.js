@@ -9,16 +9,28 @@ Page({
       location: '人民北路'
     },
     garageInfo1: {
-      number: 1,
-      location: "Parking Lot A",
-      capacity: 100,
-      ratePerHour: 5.0,
-      name: "1"
+      // number: 1,
+      // location: "Parking Lot A",
+      // capacity: 100,
+      // ratePerHour: 5.0,
+      // name: "1"
     },
     garageImage: "/images/switch.png"
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
+    console.log(options)
+    var park_id = options.park_id
+    wx.request({
+      url: 'https://63957cde.r24.cpolar.top/parking/details/' + park_id,
+      success: (result) => {
+        console.log(result.data);
+        this.setData({
+          garageInfo1: result.data
+        });
+      }
+    });
+
   },
   onReady: function () {
     // 页面渲染完成

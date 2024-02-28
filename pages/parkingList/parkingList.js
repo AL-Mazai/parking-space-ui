@@ -41,9 +41,9 @@ Page({
    */
   navigateToParkingInfo: function (e) {
     const parking = e.currentTarget.dataset.parking;
-    console.log(parking)
+    console.log("@", parking)
     wx.navigateTo({
-      url: '/pages/parkingInfo/parkingInfo'
+      url: '/pages/parkingInfo/parkingInfo?park_id=' + parking.id
     });
   },
 
@@ -51,18 +51,43 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (e) {
+    // console.log(e)
     var startStation = e.startStation; //从超链接中获取查询的数据
     var endStation = e.endStation;
-    date = e.date;
-    var data = jsonData.parkingList; //读取data.js中定义的json数据
-    var result = data.filter(p => { //过滤json数据
-      return (p.startStation == startStation && p.endStation == endStation)
+    var time = e.time;
+
+    wx.request({
+      url: 'https://63957cde.r24.cpolar.top/forecast/result?location=' + endStation,
+      success: (result) => {
+        const parkingListInfo = result.data;
+        // console.log(parkingListInfo);
+        // 遍历parkingListInfo数组，将probability属性转换为百分比
+        const formattedParkingList = parkingListInfo.map(item => {
+          // 将probability属性转换为百分比，并保留两位小数
+          const probabilityPercentage = (item.probability * 100).toFixed(2);
+          // 将百分比添加到对象中，并将probability属性替换为百分比属性
+          return {
+            ...item,
+            probability: probabilityPercentage + '%' // 添加百分号
+          };
+        });
+        // console.log("@", formattedParkingList)
+        this.setData({
+          parkingList: formattedParkingList
+        });
+      }
     });
-    this.setData({
-      date: date,
-      parkingList: result
-    })
-    console.log('start=' + startStation + "--end=" + endStation + "--date=" + date);
+
+    // var data = jsonData.parkingList; //读取data.js中定义的json数据
+    // var result = data.filter(p => { //过滤json数据
+    //   return (p.startStation == startStation && p.endStation == endStation)
+    // });
+    // this.setData({
+    //   time: time,
+    //   parkingList: result
+    // })
+
+    // console.log('start=' + startStation + "-->end=" + endStation + "--time=" + time);
   },
   myGetDate: function (num) {
     var datetime = new Date(date);

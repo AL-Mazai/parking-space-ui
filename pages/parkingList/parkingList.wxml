@@ -18,7 +18,7 @@
     </label> -->
   <view class="hr"></view>
     <radio-group class="sort" bindchange="radioChange">
-      <label class="checkbox-label" wx:for="{{items}}">
+      <label class="checkbox-label" wx:for="{{items}}" wx:key="index">
         <radio value="{{item.name}}" checked="{{item.checked}}"/>
         {{item.value}}
       </label>
@@ -27,7 +27,7 @@
 </checkbox-group>
 
 <view class="content">
-  <block wx:for="{{ parkingList }}">
+  <block wx:for="{{ parkingList }}" wx:key="index">
     <view class="bg">
       <view class="item" data-parking="{{item}}" bindtap="navigateToParkingInfo">
         <view class="wr left">
@@ -42,7 +42,7 @@
         </view>
         <view class="wr center">
           停车概率
-          <view>{{ item.parking_success }}</view>
+          <view>{{ item.probability }}</view>
         </view>
         <view class="wr right">
           <view>{{ item.endStation }}</view>
