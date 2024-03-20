@@ -13,15 +13,40 @@ Page({
     markers: [],
     latitude: '',
     longitude: '',
-    placeData: {}
+    placeData: {},
+    parkingLots: [
+      {
+        name: '云南大学楸苑地下停车场',
+        location: '云南省昆明市呈贡区云南大学楸苑三栋',
+        distance: '1.3km',
+        availableSpots: '557',
+        availableTime: '00:00~23:59'
+      },
+      {
+        name: '云南大学楸苑地下停车场',
+        location: '云南省昆明市呈贡区云南大学楸苑三栋',
+        distance: '1.3km',
+        availableSpots: '557',
+        availableTime: '00:00~23:59'
+      },
+      {
+        name: '云南大学楸苑地下停车场',
+        location: '云南省昆明市呈贡区云南大学楸苑三栋',
+        distance: '1.3km',
+        availableSpots: '557',
+        availableTime: '00:00~23:59'
+      },
+      {
+        name: '云南大学楸苑地下停车场',
+        location: '云南省昆明市呈贡区云南大学楸苑三栋',
+        distance: '1.3km',
+        availableSpots: '557',
+        availableTime: '00:00~23:59'
+      },
+
+    ]
   },
-  // makertap: function (e) {
-  //   console.log(e)
-  //   var that = this;
-  //   var id = e.markerId;
-  //   that.showSearchInfo(wxMarkerData, id);
-  //   that.changeMarkerColor(wxMarkerData, id);
-  // },
+
   onLoad: function () {
     var that = this;
     wx.getFuzzyLocation({
@@ -35,130 +60,60 @@ Page({
 
         // 获取 map 组件的上下文
         var mapContext = wx.createMapContext('map');
-        // console.log(mapContext)
         // 将地图中心移动到定位成功的位置
-        // 将地图中心移动到定位成功的位置
-      mapContext.moveToLocation({
-        latitude: res.latitude,
-        longitude: res.longitude
-      });
-        // that.search(res.latitude, res.longitude);
+        mapContext.moveToLocation({
+          latitude: res.latitude,
+          longitude: res.longitude
+        });
       },
       fail: function (err) {
         console.log("@", err);
       }
     });
-
   },
-  // search: function (latitude, longitude) {
-  //   var that = this;
-  //   // 新建百度地图对象 
-  //   var BMap = new bmap.BMapWX({
-  //     ak: 'kK0sCRXVAwGooHGQiPIn0yw8qcDR8wd0'
-  //   });
-  //   var fail = function (data) {
-  //     console.log("@", data)
-  //   };
-  //   var success = function (data) {
-  //     wxMarkerData = data.wxMarkerData;
-  //     that.setData({
-  //       markers: wxMarkerData
-  //     });
-  //     that.setData({
-  //       latitude: wxMarkerData[0].latitude
-  //     });
-  //     that.setData({
-  //       longitude: wxMarkerData[0].longitude
-  //     });
-  //   }
-
-  //   // // 发起POI检索请求 
-  //   // BMap.search({
-  //   //   "query": '酒店',
-  //   //   fail: fail,
-  //   //   success: success,
-  //   //   // 此处需要在相应路径放置图片文件 
-  //   //   iconPath: '/images/switch.png',
-  //   //   // 此处需要在相应路径放置图片文件 
-  //   //   iconTapPath: '/images/switch.png'
-  //   // });
-  // },
-
-  // showSearchInfo: function (data, i) {
-  //   var that = this;
-  //   that.setData({
-  //     placeData: {
-  //       title: '名称：' + data[i].title + '\n',
-  //       address: '地址：' + data[i].address + '\n',
-  //       telephone: '电话：' + data[i].telephone
-  //     }
-  //   });
-  // },
-  // changeMarkerColor: function (data, i) {
-  //   var that = this;
-  //   var markers = [];
-  //   for (var j = 0; j < data.length; j++) {
-  //     if (j == i) {
-  //       // 此处需要在相应路径放置图片文件 
-  //       data[j].iconPath = "/images/switch.png";
-  //     } else {
-  //       // 此处需要在相应路径放置图片文件 
-  //       data[j].iconPath = "/images/switch.png";
-  //     }
-  //     markers[j](data[j]);
-  //   }
-  //   that.setData({
-  //     markers: markers
-  //   });
-  // },
-
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 搜索地址
+  searchPlace() {
+    console.log("搜索")
+    const that = this;
+    wx.chooseLocation({
+      type: 'gcj02', // 必填，返回可以用于wx.openLocation的经纬度
+      success: function (res) {
+        // 调用微信接口获取当前的地理位置
+        const latitude = res.latitude;
+        const longitude = res.longitude;
+        that.setData({
+          longitude: longitude,
+          latitude: latitude,
+        });
+        // 获取 map 组件的上下文
+        var mapContext = wx.createMapContext('map');
+        // 将地图中心移动到定位成功的位置
+        mapContext.moveToLocation({
+          latitude: res.latitude,
+          longitude: res.longitude
+        });
+        // // 更新markers数据
+        // const marker = {
+        //   latitude: latitude,
+        //   longitude: longitude,
+        //   // ...其他标记点属性，如标题、图标等
+        // };
+        // this.setData({
+        //   markers: [marker] // 更新标记点数组
+        // });
+      },
+      fail: function (err) {
+        console.error("获取位置信息失败：", err);
+      }
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //预约
+  reserveParking: function() {
+    // 这里可以添加预约车位的逻辑
+    wx.showToast({
+      title: '预约成功',
+      icon: 'success',
+      duration: 2000
+    });
   }
 })

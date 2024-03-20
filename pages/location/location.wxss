@@ -43,3 +43,30 @@
   height: 240px; /* 设置地图高度 */
   /* 其他样式 */
 }
+/* pages/parking_info/parking_info.wxss */
+.container {
+  padding: 10px;
+}
+
+.info-box {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.info-box view {
+  margin-bottom: 5px;
+  /* font-size: 12px; */
+  /* color: #666; */
+}
+
+.btn {
+  background-color: #1AAD19;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  /* padding: 20px 40px; */
+  margin-top: 5px;
+}

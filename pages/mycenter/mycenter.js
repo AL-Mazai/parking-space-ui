@@ -9,7 +9,11 @@ Page({
     isLogin:false
     
   },
-
+  login() {
+    wx.navigateTo({ //跳转登录
+      url: '../login/login'
+    })
+  },
   //跳转反馈页面
   navigateToFeedbackPage: function () {
     wx.navigateTo({

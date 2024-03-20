@@ -2,17 +2,43 @@
 <!-- 地图测试 -->
 <view class="map_container">
   <!-- 搜索框 -->
-  <view class="search-container">
+  <!-- <view class="search-container">
     <input class="search-input" placeholder="请输入目的地" bindinput="search"></input>
     <van-icon class="search-icon" name="search" />
+  </view> -->
+  <!-- 搜索框 -->
+  <view class="search-container">
+    <input class="search-input" placeholder="请输入目的地" bindtap="searchPlace"></input>
+    <van-icon class="search-icon" name="search"></van-icon>
+    <!-- <text>点我</text> -->
   </view>
   <!-- 地图 -->
-  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
+  </map>
 </view>
 
 
-<view class="place_info">
-  <text>{{placeData.title}}</text>
-  <text>{{placeData.address}}</text>
-  <text>{{placeData.telephone}}</text>
+<!-- 地图下展示车库信息 -->
+<view class="container">
+  <block wx:for="{{parkingLots}}" wx:key="index">
+    <view class="info-box">
+      <view style="font-size: 16px; ">
+        {{item.name}}
+      </view>
+      <view style="font-size: 10px;color: #666;">
+        {{item.location}}
+      </view>
+      <view style="font-size: 12px;">
+        距我<text style="color: rgb(74, 118, 212);">{{item.distance}}</text>
+      </view>
+      
+      <view style="font-size: 12px;">可预约车位：<text style="color: rgb(74, 118, 212);">{{item.availableSpots}}</text> 个</view>
+      <view style="font-size: 12px;">可预约时间：<text style="color: rgb(74, 118, 212);">{{item.availableTime}}</text></view>
+
+      <van-button type="info" class="btn" data-index="{{index}}" bindtap="reserveParking" custom-style="width:100%;height:30px;">
+        立即预约
+      </van-button>
+
+    </view>
+  </block>
 </view>
