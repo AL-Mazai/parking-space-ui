@@ -55,12 +55,18 @@ Page({
     var startStation = e.startStation; //从超链接中获取查询的数据
     var endStation = e.endStation;
     var time = e.time;
+    console.log("time:", time)
 
     wx.request({
-      url: 'https://63957cde.r24.cpolar.top/forecast/result?location=' + endStation,
+      url: 'https://3fa302f2.r21.cpolar.top/forecast/resultAndSort',
+      data:{
+        arrivalTime:'2024-01-01',
+        location: endStation,
+        sortType: "概率优先"
+      },
       success: (result) => {
-        const parkingListInfo = result.data;
-        // console.log(parkingListInfo);
+        const parkingListInfo = result.data.data;
+        console.log(parkingListInfo);
         // 遍历parkingListInfo数组，将probability属性转换为百分比
         const formattedParkingList = parkingListInfo.map(item => {
           // 将probability属性转换为百分比，并保留两位小数
@@ -75,6 +81,8 @@ Page({
         this.setData({
           parkingList: formattedParkingList
         });
+
+        console.log(this.data.parkingList)
       }
     });
 
@@ -89,6 +97,8 @@ Page({
 
     // console.log('start=' + startStation + "-->end=" + endStation + "--time=" + time);
   },
+
+
   myGetDate: function (num) {
     var datetime = new Date(date);
     datetime.setDate(datetime.getDate() + num); //计算num天后的日期

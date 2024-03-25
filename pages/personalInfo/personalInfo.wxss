@@ -1,0 +1,45 @@
+/* pages/personalInfo/personalInfo.wxss */
+.container {
+  position: relative; /* 设置相对定位 */
+  padding: 5px;
+
+  /* border: solid 1px red; */
+}
+
+.section {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: space-between; /* 水平两端对齐 */
+  height: 40px;
+}
+
+.label {
+  font-size: 14px;
+  color: #333;
+}
+.value {
+  font-size: 14px;
+  color: #666;
+
+  margin-right: 5px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.hr{
+  height: 1px;
+  background-color: #cccccc;
+  opacity: 0.5;
+}
+.logout{
+  position: absolute; /* 绝对定位 */
+  bottom: 0; /* 距离底部为0 */
+  left: 50%; /* 距离左侧为视口宽度的一半 */
+  transform: translateX(-50%); /* X轴向左移动自身宽度的一半，以水平居中 */
+  width: 120px; /* 按钮宽度 */
+  height: 30px; /* 按钮高度 */
+  margin: 1px; /* 按钮外边距 */
+}

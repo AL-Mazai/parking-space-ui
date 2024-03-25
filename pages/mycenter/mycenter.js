@@ -2,15 +2,13 @@
 
 Page({
   data: {
-    user: {
-      username: "zzw",
-      phone: "15877712345"
-    },
-    isLogin:false
-    
+    username: "zzw",
+    phone: "15877712345",
+    isLogin: false
   },
-  login() {
-    wx.navigateTo({ //跳转登录
+  //跳转登录
+  toLogin() {
+    wx.navigateTo({
       url: '../login/login'
     })
   },
@@ -20,17 +18,35 @@ Page({
       url: '/pages/feedback/feedback', // 此处是反馈页面的路径
     });
   },
+  //跳转个人信息页面
+  toPersonalInfo:function(){
+    wx.navigateTo({
+      url: '/pages/personalInfo/personalInfo'
+    });
+  },
 
   onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-    
+
   },
 
   onReady: function () {
     // 页面渲染完成
   },
   onShow: function () {
-    // 页面显示
+    const isLogin = wx.getStorageSync('isLogin');
+    this.setData({
+      isLogin: isLogin,
+    });
+    console.log(isLogin)
+    if (isLogin) {
+      // 用户已登录，可以进行后续操作
+      const userInfo = wx.getStorageSync('userInfo');
+      console.log("userInfo：", userInfo)
+      this.setData({
+        username: userInfo.name // 假设userInfo是对象，包含用户信息
+      });
+      // 根据实际情况，可以在这里进行页面跳转或其他操作
+    }
   },
   onHide: function () {
     // 页面隐藏

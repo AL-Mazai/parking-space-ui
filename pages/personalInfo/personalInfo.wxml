@@ -1,0 +1,41 @@
+<!--pages/personalInfo.wxml-->
+<view class="container">
+  <view class="section">
+    <view class="label">头像</view>
+    <image class="avatar" src="{{user.avatar}}" />
+  </view>
+  <view class="hr"></view>
+
+  <view class="section">
+    <view class="label">姓名</view>
+    <view class="value">{{user.name}}</view>
+  </view>
+  <view class="hr"></view>
+  <view class="section">
+    <view class="label">电话号码</view>
+    <view class="value">{{user.phone}}</view>
+  </view>
+  <view class="hr"></view>
+
+  <view class="section">
+    <view class="label">公司名称</view>
+    <view class="value">{{user.company}}</view>
+  </view>
+  <view class="hr"></view>
+
+  <view class="section">
+    <view class="label">性别</view>
+    <view class="value">{{user.gender}}</view>
+  </view>
+  <view class="hr"></view>
+
+  <view class="section">
+    <view class="label">生日</view>
+    <view class="value">{{user.birthday}}</view>
+  </view>
+  <view class="hr"></view>
+  <view style="height: 40px;"></view>
+
+
+  <van-button class="logout" type="danger" bindtap="logout" custom-style="width:120px;height:30px;margin:0 1px 1px 0">退出登录</van-button>
+</view>

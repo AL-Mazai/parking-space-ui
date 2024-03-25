@@ -29,7 +29,7 @@ Page({
     console.log("开始发送请求....")
     // 1 发送异步请求获取数据
     wx.request({
-      url: 'https://1eef6bdc.r27.cpolar.top/getParkingLot', //请求的接口地址
+      url: 'https://3fa302f2.r21.cpolar.top/getParkingLot', //请求的接口地址
       success: (result) => {
         const parkingListInfo = result.data;
         console.log(parkingListInfo);

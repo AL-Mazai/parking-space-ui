@@ -1,10 +1,7 @@
 // pages/location.js
-// // 引入SDK核心类
-// var QQMapWX = require('../../libs/qqmap-wx-jssdk');
-// var qqmapsdk;
-// 引用百度地图微信小程序JSAPI模块 
-var bmap = require('../../libs/bmap-wx.js');
-var wxMarkerData = [];
+// 引用腾讯地图
+var QQMapWX = require('../utils/qqmap-wx-jssdk');
+var qqmapsdk;
 Page({
   /**
    * 页面的初始数据
@@ -13,9 +10,9 @@ Page({
     markers: [],
     latitude: '',
     longitude: '',
+    rgcData: {},
     placeData: {},
-    parkingLots: [
-      {
+    parkingLots: [{
         name: '云南大学楸苑地下停车场',
         location: '云南省昆明市呈贡区云南大学楸苑三栋',
         distance: '1.3km',
@@ -44,11 +41,16 @@ Page({
         availableTime: '00:00~23:59'
       },
 
-    ]
+    ],
   },
 
   onLoad: function () {
     var that = this;
+    // 实例化腾讯地图API核心类
+    qqmapsdk = new QQMapWX({
+      key: 'AU7BZ-7233J-7CWFL-XNDFH-BAHPE-J3BGV'
+    });
+
     wx.getFuzzyLocation({
       type: 'gcj02',
       success: function (res) {
@@ -85,30 +87,19 @@ Page({
           longitude: longitude,
           latitude: latitude,
         });
-        // 获取 map 组件的上下文
-        var mapContext = wx.createMapContext('map');
-        // 将地图中心移动到定位成功的位置
-        mapContext.moveToLocation({
-          latitude: res.latitude,
-          longitude: res.longitude
-        });
-        // // 更新markers数据
-        // const marker = {
-        //   latitude: latitude,
-        //   longitude: longitude,
-        //   // ...其他标记点属性，如标题、图标等
-        // };
-        // this.setData({
-        //   markers: [marker] // 更新标记点数组
-        // });
       },
       fail: function (err) {
         console.error("获取位置信息失败：", err);
       }
     });
+    //获取到经纬度信息后，利用经纬度信息获取位置附近的车库信息
+    console.log(this.data.latitude)
+    console.log(this.data.longitude)
   },
+
+
   //预约
-  reserveParking: function() {
+  reserveParking: function () {
     // 这里可以添加预约车位的逻辑
     wx.showToast({
       title: '预约成功',

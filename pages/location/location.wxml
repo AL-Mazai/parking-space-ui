@@ -10,7 +10,6 @@
   <view class="search-container">
     <input class="search-input" placeholder="请输入目的地" bindtap="searchPlace"></input>
     <van-icon class="search-icon" name="search"></van-icon>
-    <!-- <text>点我</text> -->
   </view>
   <!-- 地图 -->
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
@@ -38,7 +37,6 @@
       <van-button type="info" class="btn" data-index="{{index}}" bindtap="reserveParking" custom-style="width:100%;height:30px;">
         立即预约
       </van-button>
-
     </view>
   </block>
 </view>
