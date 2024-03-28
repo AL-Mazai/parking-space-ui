@@ -47,3 +47,10 @@
   font-size: 16px;
   color: #333;
 }
+
+.van-button {
+  top: 2px;
+  /* position: fixed; */
+  left: 50%; /* 居中 */
+  transform: translateX(-50%);
+}

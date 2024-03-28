@@ -4,6 +4,7 @@ Page({
     username: '',
     password: ''
   },
+
   inputUsername(e) {
     this.setData({
       username: e.detail.value
@@ -22,7 +23,7 @@ Page({
     if (username && password) {
       // 发起登录请求
       wx.request({
-        url: 'https://3fa302f2.r21.cpolar.top/user/login', // 后端登录接口地址
+        url: 'http://parkingprediction.frp.fafudie.top/user/login', // 后端登录接口地址
         method: 'POST', // 使用POST方法
         data: {
           name: username,
@@ -38,6 +39,11 @@ Page({
             wx.navigateBack({
               delta: 1 // 返回页面数，1 表示返回上一级页面
             });
+            wx.showToast({
+              title: '登录成功！',
+              icon: 'success',
+              duration: 1000
+            })
           } else {
             // 登录失败，提示错误信息
             wx.showToast({

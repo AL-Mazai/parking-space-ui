@@ -50,6 +50,14 @@
       </view>
     </view>
     <view class="hr"></view>
+    <view class="personnel-item" bindtap="navigateToParkingRecord">
+      <image src="../../images/bar/xfjl-1.jpg"></image>
+      <view class="personnel-descript">
+        <text>停车记录</text>
+        <text class="action"></text>
+      </view>
+    </view>
+    <view class="hr"></view>
     <view class="personnel-item">
       <image src="../../images/icon/message.png"></image>
       <view class="personnel-descript">

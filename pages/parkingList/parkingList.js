@@ -7,6 +7,9 @@ Page({
    */
   data: {
     parkingList: [],
+    startStation: '',
+    endStation: '',
+    startTime: '',
     date: "",
     items: [{
         name: 'time_priority',
@@ -28,6 +31,7 @@ Page({
     ],
     radio: '1',
   },
+
   onChange(event) {
     this.setData({
       radio: event.detail,
@@ -40,10 +44,10 @@ Page({
    * 跳转到车库信息页面
    */
   navigateToParkingInfo: function (e) {
-    const parking = e.currentTarget.dataset.parking;
-    console.log("@", parking)
+    const parkingInfo = e.currentTarget.dataset
+    // console.log("@", parkingInfo)
     wx.navigateTo({
-      url: '/pages/parkingInfo/parkingInfo?park_id=' + parking.id
+      url: '/pages/parkingInfo/parkingInfo?parkingInfo=' + JSON.stringify(parkingInfo)
     });
   },
 
@@ -54,15 +58,19 @@ Page({
     // console.log(e)
     var startStation = e.startStation; //从超链接中获取查询的数据
     var endStation = e.endStation;
-    var time = e.time;
-    console.log("time:", time)
+    var time = e.timeValue;
+    this.setData({
+      startStation: startStation,
+      endStation: endStation,
+      startTime: time
+    });
 
     wx.request({
-      url: 'https://3fa302f2.r21.cpolar.top/forecast/resultAndSort',
-      data:{
-        arrivalTime:'2024-01-01',
+      url: 'http://parkingprediction.frp.fafudie.top/forecast/resultAndSort',
+      data: {
+        arrivalTime: time,
         location: endStation,
-        sortType: "概率优先"
+        sortType: "3"
       },
       success: (result) => {
         const parkingListInfo = result.data.data;
@@ -81,32 +89,20 @@ Page({
         this.setData({
           parkingList: formattedParkingList
         });
-
-        console.log(this.data.parkingList)
+        // console.log("@", this.data.parkingList)
       }
     });
-
-    // var data = jsonData.parkingList; //读取data.js中定义的json数据
-    // var result = data.filter(p => { //过滤json数据
-    //   return (p.startStation == startStation && p.endStation == endStation)
-    // });
-    // this.setData({
-    //   time: time,
-    //   parkingList: result
-    // })
-
-    // console.log('start=' + startStation + "-->end=" + endStation + "--time=" + time);
   },
 
 
-  myGetDate: function (num) {
-    var datetime = new Date(date);
-    datetime.setDate(datetime.getDate() + num); //计算num天后的日期
-    var y = datetime.getFullYear();
-    var m = datetime.getMonth() + 1;
-    var d = datetime.getDate();
-    return y + "-" + m + "-" + d;
-  },
+  // myGetDate: function (num) {
+  //   var datetime = new Date(date);
+  //   datetime.setDate(datetime.getDate() + num); //计算num天后的日期
+  //   var y = datetime.getFullYear();
+  //   var m = datetime.getMonth() + 1;
+  //   var d = datetime.getDate();
+  //   return y + "-" + m + "-" + d;
+  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -120,39 +116,4 @@ Page({
   onShow: function () {
 
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

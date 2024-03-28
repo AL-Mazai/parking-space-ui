@@ -9,7 +9,8 @@
     "pages/location/location",
     "pages/login/login",
     "pages/vehicle/vehicle",
-    "pages/personalInfo/personalInfo"
+    "pages/personalInfo/personalInfo",
+    "pages/time/time"
   ],
   "window": {
     "navigationBarTitleText": "停车位",
@@ -20,18 +21,17 @@
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/parking/parking",
         "text": "停车服务",
         "iconPath": "./images/bar/hcp-0.jpg",
         "selectedIconPath": "./images/bar/hcp-1.jpg"
       },
       {
-        "pagePath": "pages/record/record",
-        "text": "消费记录",
-        "iconPath": "./images/bar/xfjl-1.jpg",
-        "selectedIconPath": "./images/bar/xfjl-1.jpg"
+        "pagePath": "pages/location/location",
+        "text": "找车位",
+        "iconPath": "./images/bar/qcp-0.jpg",
+        "selectedIconPath": "./images/bar/qcp-1.jpg"
       },
       {
         "pagePath": "pages/mycenter/mycenter",

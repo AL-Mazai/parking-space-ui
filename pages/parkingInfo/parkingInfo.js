@@ -1,47 +1,34 @@
 Page({
   data: {
-    garageInfo: {
-      name: '大理车库',
-      number: '001',
-      capacity: 100,
-      emptySpaces: 25,
-      price: 10,
-      location: '人民北路'
-    },
-    garageInfo1: {
-      // number: 1,
-      // location: "Parking Lot A",
-      // capacity: 100,
-      // ratePerHour: 5.0,
-      // name: "1"
-    },
+    // garageInfo1: {
+    //   name: '大理车库',
+    //   number: '001',
+    //   capacity: 100,
+    //   emptySpaces: 25,
+    //   price: 10,
+    //   location: '人民北路'
+    // },
+    garageInfo: {},
     garageImage: "/images/switch.png"
   },
-  onLoad: function (options) {
-    // 页面初始化 options为页面跳转所带来的参数
-    console.log(options)
-    var park_id = options.park_id
-    wx.request({
-      url: 'https://63957cde.r24.cpolar.top/parking/details/' + park_id,
-      success: (result) => {
-        console.log(result.data);
-        this.setData({
-          garageInfo1: result.data
-        });
-      }
-    });
+  onLoad: function (e) {
+    // 对参数进行解码并解析为对象
+    const garageInfo = JSON.parse(e.parkingInfo); 
+    // console.log(garageInfo.parking)
+    this.setData({
+      garageInfo: garageInfo.parking.parkingLot
+    })
+  },
+  //预约
+  reserve: function(){
+    wx.showToast({
+      title: '预约成功！',
+      icon: 'success',
+      duration: 1000
+    })
+  },
 
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
   onShow: function () {
     // 页面显示
   },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
-  }
 })

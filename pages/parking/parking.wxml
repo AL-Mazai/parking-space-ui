@@ -2,10 +2,8 @@
   <!-- <swiper current="{{ currentTab }}" style="height:400px"> -->
   <!-- <swiper-item> -->
   <view class="hr"></view>
-
   <view class="formbg">
     <form bindsubmit="formSubmit" action="">
-
       <!-- 起始地 -->
       <view class="station">
         <view>
@@ -13,28 +11,28 @@
           <input name="startStation" value="{{ start }}" bindinput="bindStartInput" />
         </view>
         <view>
-          <image src="/images/icon/hcp/xz.jpg" style="width:44px;height:45px;" bindtap="change" data-start="{{ start }}" data-end="{{ end }}"></image>
+          <image src="/images/icon/hcp/xz.jpg" style="width:44px;height:45px;" bindtap="changeStartAndEnd" data-start="{{ start }}" data-end="{{ end }}"></image>
         </view>
         <view>
           <text class="city-descript">到达城市</text>
           <input name="endStation" value="{{ end }}" bindinput="bindEndInput" />
         </view>
       </view>
-
       <view class="hr"></view>
-
       <!-- 日期时间 -->
       <view class="date">
-        <picker mode="time" name="time" value="{{ time }}" start="00::00" end="23:59" bindchange="bindDateChange">
+        <!-- <picker mode="datetime" name="datetime" value="{{ datetime }}" start="00:00" end="23:59" bindchange="bindDateChange">
           <view>出发时间：{{ time }}</view>
-        </picker>
+        </picker> -->
+
+        <time-picker value="{{timeValue}}" bind:change="handleChange">时间：{{timeValue}}</time-picker>
       </view>
 
       <view class="hr"></view>
       <view class="button-container">
         <van-button type="info" form-type="submit" custom-style="padding:5px;width:120px;height:30px;">查询</van-button>
       </view>
-      
+
       <view class="record">
         <text>昆明->大理</text>
         <text>大理->昆明</text>
@@ -46,9 +44,6 @@
 
     </form>
   </view>
-  <!-- </swiper-item> -->
-  <!-- </swiper> -->
-
   <view class="query-box extension">
     <view class="query-row">
       <view class="extension-item">
@@ -76,15 +71,15 @@
     <!-- 车辆管理页面测试 -->
     <van-button type="info" bindtap="vehicle" custom-style="width:120px;height:30px;margin:0 1px 1px 0">车辆管理测试</van-button>
     <!-- 登录测试 -->
-    <van-button type="info" bindtap="login" custom-style="width:120px;height:30px;">登录测试</van-button>
+    <!-- <van-button type="info" bindtap="login" custom-style="width:120px;height:30px;">登录测试</van-button> -->
   </view>
   <view class="button-container">
     <!-- 后端接口测试 -->
-    <van-button type="info" bindtap="getBusinessList" custom-style="width:120px;height:30px;margin:0 1px 1px 0">后端接口测试</van-button>
+    <!-- <van-button type="info" bindtap="getBusinessList" custom-style="width:120px;height:30px;margin:0 1px 1px 0">后端接口测试</van-button>
     <block wx:for="{{businessTypeList}}" wx:key="id">
       {{item.typeName}}
-    </block>
+    </block> -->
     <!-- 地图测试 -->
-    <van-button type="info" bindtap="getMap" custom-style="width:120px;height:30px;">地图测试</van-button>
+    <!-- <van-button type="info" bindtap="getMap" custom-style="width:120px;height:30px;">地图测试</van-button> -->
   </view>
 </view>

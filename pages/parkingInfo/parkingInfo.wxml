@@ -3,20 +3,22 @@
     <image src="/images/switch.png" />
   </view>
   <view class="garage-name">
-    <text>{{garageInfo1.name}}</text>
+    <text>{{garageInfo.name}}</text>
   </view>
   <view class="hr"></view>
+  <!-- <view class="info">
+    <text class="garage-number">编号：{{garageInfo.id}}</text>
+  </view> -->
   <view class="info">
-    <text class="garage-number">编号：{{garageInfo1.id}}</text>
+    <!-- <text class="garage-info-capacity">容量：{{garageInfo.capacity}} 辆</text> -->
+    <text class="garage-info-num">空位数量：{{garageInfo.capacity}} 个</text>
   </view>
   <view class="info">
-    <!-- <text class="garage-info-capacity">容量：{{garageInfo1.capacity}} 辆</text> -->
-    <text class="garage-info-num">空位数量：{{garageInfo1.capacity}} 个</text>
+    <text class="garage-info-item">价格：{{garageInfo.ratePerHour}} 元/小时</text>
   </view>
   <view class="info">
-    <text class="garage-info-item">价格：{{garageInfo1.ratePerHour}} 元/小时</text>
-  </view>
-  <view class="info">
-    <text class="garage-location">位置：{{garageInfo1.location}}</text>
+    <text class="garage-location">位置：{{garageInfo.location}}</text>
   </view>
 </view>
+
+<van-button type="info" bindtap="reserve" custom-style="width:320px;height:30px;margin:0 1px 1px 0">预约</van-button>
